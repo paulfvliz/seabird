@@ -29,24 +29,13 @@ sep: |
 
 data: |
   (?P<data>
-    (?:
-        (?:                     # Start of one variable
-          \ *
-          -?                    # Can be a negative number
-          \d+                   # Any digits
-            (?:
-              \.\d+               # Real numbers
-              (?:
-                e[\+|-]\d+        # Cientific notation
-              )?
-            )?
-        )+                      # Repeat as much variables as there are
-        #  (?:
-        #  )?
-          \s*                   # Following empty spaces, end of line
-    )+                          # One or more lines
+    (?:                       # start of scan
+      (?:                     # start of variable
+        [0-9+e. \-]{11}       # a variable contains 11 chars
+      )+                      # scan contains multiple variables
+      \r?\n                   # scan ends with newline
+    )+                        # data has multiple scans
   )
-
 # First section of the header
 intro:
     sbe_model:
