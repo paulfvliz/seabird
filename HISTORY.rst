@@ -3,6 +3,23 @@
 History
 -------
 
+0.12.x
+------
+
+* Upgrading package structure. Before it was still an early Python-3 structure
+  that limited to Python<3.8
+
+0.11.x
+------
+
+* Migrating QC resources from CoTeDe to here. Until now CoTeDe would use PySeabird to understand CTD & TSG data files to QC, but now it is PySeabird that imports CoTeDe, as a plugin, to apply those same QC procedures.
+
+0.10.x
+------
+
+* Data variables split by position. Rare cases use 11 characters thus not leaving any space between fields.
+* Improved bottle dataset
+
 0.9.x
 -----
 
@@ -73,7 +90,7 @@ History
 
 * Refactoring. Parsed text is saved in self.parsed, preparing to output
     everything that wasn't specifically parsed.
-* XML is extracted into self.attributes['awkward_xml']
+* XML is extracted into self.attrs['awkward_xml']
 
 0.1.7
 -----
@@ -89,7 +106,7 @@ History
 
 * When position available in the header.intro as NMEA, load this instead of
     try to parse from the header.notes.
-* Load default values from a yaml file, like attributes{cruise, project, 
+* Load default values from a yaml file, like attributes{cruise, project,
     shipname ...}
 * Using a recommended variable names list
 
@@ -110,3 +127,12 @@ History
 
 * Initial import.
 * It's able to load the variables into Masked Array, but it's not the best way to do it.
+
+pre-0.1
+-------
+
+This package was derived from what is now CoTeDe. It had a different name at
+that time. Gui re-structure it in 2006 into a consistent Python package to
+quality control TSG at NOAA/AOML. Operating with different models of TSGs and
+different versions of outputs, it was crucial to parse and normalize those
+into a consistent data model for a standard QC procedure.

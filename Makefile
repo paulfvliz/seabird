@@ -38,7 +38,8 @@ lint:
 	flake8 seabird tests
 
 test:
-	py.test seabird
+	python -c 'import seabird.utils; seabird.utils.sampledata()'
+	pytest tests
 
 test-all:
 	tox

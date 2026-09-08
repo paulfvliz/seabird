@@ -24,6 +24,7 @@ User Documentation
    overview
    install
    getting_started
+   commandline
 
 
 Indices and tables
@@ -32,4 +33,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

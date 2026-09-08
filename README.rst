@@ -10,13 +10,16 @@ Seabird
       :alt: Documentation Status
 
 .. image:: https://img.shields.io/travis/castelao/seabird.svg
-        :target: https://travis-ci.org/castelao/seabird
+   :target: https://travis-ci.org/castelao/seabird
 
-.. image:: https://codecov.io/github/castelao/seabird/coverage.svg?branch=master
-    :target: https://codecov.io/github/castelao/seabird?branch=master
+.. image:: https://codecov.io/gh/castelao/seabird/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/castelao/seabird
 
 .. image:: https://img.shields.io/pypi/v/seabird.svg
-        :target: https://pypi.python.org/pypi/seabird
+   :target: https://pypi.python.org/pypi/seabird
+
+.. image:: https://mybinder.org/badge_logo.svg
+   :target: https://mybinder.org/v2/gh/castelao/seabird/master?filepath=docs%2Fnotebooks
 
 
 This is a parser for Sea Bird CTD and TSG output files.
@@ -49,7 +52,7 @@ To install:
     pip install seabird
 
 
-One way to use is running on the shell the cnvdump. Independent of the historical version of the cnv file, it will return a default structure: 
+One way to use is running on the shell the cnvdump. Independent of the historical version of the cnv file, it will return a default structure:
 
     seabird cnvdump your_file.cnv
 
@@ -65,7 +68,7 @@ In a python script, one can use like this:
 
     profile = fCNV('your_file.cnv')
 
-    profile.attributes  # It will return the header, as a dictionary.
+    profile.attrs # It will return the header, as a dictionary.
 
     profile.keys() # It will list the available variables.
 
